@@ -17,11 +17,32 @@ def main_menue():
 @maindeco
 def second_menue():
                    
-    button( display_width*0.1, display_height*0.3, display_width*0.3125,display_height/6,'+', einfach['+'].display_task, size = 60)
-    button( display_width*0.55, display_height*0.3, display_width*0.3125,display_height/6,'-',  einfach['-'].display_task, size = 100)
-    button( display_width*0.1, display_height*0.5, display_width*0.3125,display_height/6,'*', einfach['*'].display_task, size = 60)
+    button( display_width*0.1, display_height*0.3, display_width*0.3125,display_height/6,'+', add_difficulty_menue , size = 60)
+    button( display_width*0.55, display_height*0.3, display_width*0.3125,display_height/6,'-', sub_difficulty_menue , size = 100)
+    button( display_width*0.1, display_height*0.5, display_width*0.3125,display_height/6,'*', mult_difficulty_menue , size = 60)
     button( display_width*0.55, display_height*0.5, display_width*0.3125,display_height/6,'/', bruch.display_task, size = 60)
-
+    
+@maindeco
+def add_difficulty_menue():
+    
+    button( display_width*0.1, display_height*0.3, display_width*0.3125,display_height/6,'+', einfach['+'].display_task , size = 60)
+    button( display_width*0.55, display_height*0.3, display_width*0.3125,display_height/6,'+',  mittel['+'].display_task, size = 100)
+    button( display_width*0.1, display_height*0.5, display_width*0.3125,display_height/6,'+', schwer['+'].display_task, size = 60) 
+    
+@maindeco
+def sub_difficulty_menue():   
+    
+    button( display_width*0.1, display_height*0.3, display_width*0.3125,display_height/6,'-', einfach['-'].display_task , size = 60)
+    button( display_width*0.55, display_height*0.3, display_width*0.3125,display_height/6,'-',  mittel['-'].display_task, size = 100)
+    button( display_width*0.1, display_height*0.5, display_width*0.3125,display_height/6,'-', schwer['-'].display_task, size = 60)
+    
+@maindeco
+def mult_difficulty_menue():
+    
+    button( display_width*0.1, display_height*0.3, display_width*0.3125,display_height/6,'*', einfach['*'].display_task , size = 60)
+    button( display_width*0.55, display_height*0.3, display_width*0.3125,display_height/6,'*',  mittel['*'].display_task, size = 100)
+    button( display_width*0.1, display_height*0.5, display_width*0.3125,display_height/6,'*', schwer['*'].display_task, size = 60)
+    
 class base_task(object):
     
     size = 50
